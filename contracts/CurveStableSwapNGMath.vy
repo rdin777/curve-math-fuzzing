@@ -84,7 +84,7 @@ def get_D(
         D_P /= pow_mod256(_n_coins, _n_coins)
         Dprev: uint256 = D
 
-        # ОПТИМИЗИРОВАННАЯ ФОРМУЛА С СОХРАНЕНИЕМ ТОЧНОСТИ
+        # OPTIMIZED FORMULA WITH PRESERVED ACCURACY
         # D = (Ann * S / A_PRECISION + D_P * _n_coins) * D / ((Ann - A_PRECISION) * D / A_PRECISION + (_n_coins + 1) * D_P)
         
         term1: uint256 = unsafe_div(Ann * S, A_PRECISION)
@@ -103,7 +103,7 @@ def get_D(
             if Dprev - D <= 1: return D
     raise
 
-# Остальные функции (get_y_D, exp) остаются без изменений
+# The remaining functions (get_y_D, exp) remain unchanged.
 @external
 @pure
 def get_y_D(
