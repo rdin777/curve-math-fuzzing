@@ -1,0 +1,8 @@
+.build/
+cache/
+out/
+lib/
+*.lock
+foundry.toml
+*.pyc
+__pycache__/
